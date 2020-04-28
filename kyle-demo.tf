@@ -1,5 +1,16 @@
 provider "aws" {}
 
+
+terraform {
+  backend "s3" { # s3 must be created first
+    bucket  = "tf-state-demo-bucket"
+    key     = "terraform.tfstate"
+    region  = "us-west-2"
+    encrypt = true
+    # dynamodb_table = "my-lock-table"  # for state locking
+  }
+}
+
 resource "aws_security_group" "demo_allow_http_ssh" {
   name        = "demo_allow_http_ssh"
   description = "Allow HTTP and SSH inbound traffic"
@@ -43,3 +54,5 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+
