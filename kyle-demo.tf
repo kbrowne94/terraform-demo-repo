@@ -1,6 +1,6 @@
 variable "deploy_region" {}
 variable "access_key" {}
-variable "scret_key" {}
+variable "secret_key" {}
 
 
 provider "aws" {
