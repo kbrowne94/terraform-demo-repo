@@ -4,9 +4,9 @@ variable "scret_key" {}
 
 
 provider "aws" {
-  region     = var.deploy_region
-  access_key = var.access_key
-  secret_key = var.secret_key
+  region     = "${var.deploy_region}"
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
 }
 
 
