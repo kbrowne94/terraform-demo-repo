@@ -1,6 +1,4 @@
-variable "deploy_region" {}
-variable "access_key" {}
-variable "secret_key" {}
+
 
 
 provider "aws" {
@@ -55,3 +53,6 @@ resource "aws_instance" "web" {
 }
 
 
+variable "deploy_region" {}
+variable "access_key" {}
+variable "secret_key" {}
