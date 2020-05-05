@@ -1,13 +1,3 @@
-
-
-
-provider "aws" {
-  region     = "${var.deploy_region}"
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
-}
-
-
 resource "aws_security_group" "demo_allow_http_ssh" {
   name        = "demo_allow_http_ssh"
   description = "Allow HTTP and SSH inbound traffic"
